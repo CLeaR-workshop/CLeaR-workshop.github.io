@@ -1,20 +1,28 @@
 * {
-    box-sizing: border-box; }
+    box-sizing: content-box; }
     
 body{
     text-align: center;
     justify-content: center;
     font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    /* border: solid; */
 
 }
 
 #info{
     justify-content: center;
+    margin-top: 70vmin;
+}
+
+#header{
+    width: 100%;
 }
 
 #header-image{
     width: 100%;
     height: auto;
+    position: absolute;
+    left: 0;
 }
 
 #header-text{
@@ -47,7 +55,7 @@ body{
 #nav-btn{
     position: fixed;
     top: 0.5rem;
-    right: 3rem;
+    right: 2rem;
     padding: 0.5rem;
     transition: transform 0.3s ease-in-out;
     display: none;
@@ -113,18 +121,18 @@ a:hover{
 }
 
 #header-text h1{
-    font-size: 3rem;
+    font-size: 2.5rem;
 }
 
 #header-text h3{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 #phone-header{
     display: none;
 }
 
-@media only screen and (max-width: 900px){
+@media only screen and (max-width: 549px){
     #navbar{
         display: none;
     }
@@ -133,9 +141,9 @@ a:hover{
     }
     #header-image{
         position: relative;
-        top: 4rem;
+        top: 3rem;
         z-index: 0;
-        width: 90%;
+        width: 100%;
         height: auto;
     }
     #header-text{
@@ -143,15 +151,18 @@ a:hover{
     }
     #phone-header{
         display: block;
-        margin: 4rem;
+        z-index: 2;
+        position: relative;
     }
     #phone-header h1{
-        font-size: 1.6rem;
+        font-size: 1.3rem;
+        color: white;
     }
     
     #phone-header h3{
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
+
     #nav-btn{
         display: block;
     }
@@ -163,7 +174,69 @@ a:hover{
         justify-content: center;
         font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
         font-size: 0.8rem;
-        max-width: 90%;
+        max-width: 100%;
+    }
+    #info{
+        justify-content: center;
+        margin-top: 0;
+    }
+}
+
+@media only screen and (max-width: 910px) and (min-width: 550px){
+    #navbar{
+        display: none;
+    }
+    .nav-item{
+        padding: 0.5rem;
+    }
+    #header-image{
+        position: relative;
+        top: 3rem;
+        z-index: 0;
+        width: 100%;
+        height: auto;
+    }
+    /* #header-text{
+        display: none;
+    }
+    #phone-header{
+        display: block;
+        z-index: 2;
+        position: relative;
+    }
+    #phone-header h1{
+        font-size: 1.3rem;
+        color: white;
+    }
+    
+    #phone-header h3{
+        font-size: 0.8rem;
+    } */
+
+    #header-text h1{
+        font-size: 1.3rem;
+    }
+    
+    #header-text h3{
+        font-size: 0.8rem;
+    }
+
+    #nav-btn{
+        display: block;
+    }
+    .nph{
+        display: none;
+    }
+    body{
+        text-align: center;
+        justify-content: center;
+        font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 0.8rem;
+        max-width: 100%;
+    }
+    #info{
+        justify-content: center;
+        margin-top: 3rem;
     }
 }
 
@@ -230,6 +303,7 @@ ul li{
     justify-content: center;
     box-shadow: 0 0 5px rgba(0,0,0,0.5);
     margin-bottom: 0.5rem;
+    margin-right: 1rem;
   }
 
 #org-table{
@@ -254,6 +328,6 @@ table{
     border-spacing: 0;
 }
 
-#org{
+#org, #prog{
     overflow-x: auto;
 }
