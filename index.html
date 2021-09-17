@@ -1,637 +1,469 @@
 <!DOCTYPE html>
-
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>CLeaR 2022</title>
-  <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-  <link href='//fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-  <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-  <!-- Latest compiled and minified CSS -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous" defer></script>
+    <!-- <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen"> -->
+    <!-- Latest compiled and minified CSS -->
+    <title>CLeaR 2022</title>
 </head>
-
-<body>
-  <section class="page-header">
-    <h1 class="project-name">CLeaR 2022</h1>
-    <h2 class="project-tagline">The First International Workshop on Combining Learning and Reasoning: Programming Languages, Formalisms, and Representations</h2>
-    <h2 class="project-tagline">In conjunction with the 36th AAAI conference on artificial intelligence
-      <a href="https://ijcai19.org">(AAAI-2022)</a>, February 22-March 1, 2022, Vancouver, BC, Canada
-    </h2>
-    <br>
-    Workshop Day: TBD,
-    Location: TBD
-  </section>
-  <section>
-    <!-- Static navbar -->
-    <nav class="navbar navbar-default">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
-            aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#overview">Overview</a></li>
-            <li><a href="#topics">Topics</a></a></li>
-            <li><a href="#schedule">Schedule</a></li>
-            <li><a href="#invited-speakers">Invited Speakers</a></li>
-            <!--<li><a href="#submission-info">Submission</a></li>!-->
-            <li><a href="#accepted-papers">Accepted Paper</a></li>
-            <li><a href="#important-dates">Important Dates</a></li>
-            <!--li><a href="#demos">Demos</a></li-->
-            <!--li><a href="#panel">Panel</a></li-->
-            <li><a href="#organizers">Organizers</a></li>
-<!--            <li><a href="pastWorkshops.html">Past Workshops</a>-->
-          </ul>
-        </div>
-        <!--/.nav-collapse -->
-      </div>
-      <!--/.container-fluid -->
+<body id="main">
+    <div class="nav-item"><button id="nav-btn">☰
+    </button></div>
+    <nav id="nav">
+        <ul>
+            <li>
+                <div class="nav-item" id="navitem1">
+                    <a href="#overview">Overview</a>
+                </div>
+            </li>
+            <li>
+                <div class="nav-item">
+                    <a href="#topics">Topics</a>
+                </div>
+            </li>
+            <li>
+                <div class="nav-item">
+                    <a href="#schedule">Schedule</a>
+                </div>
+            </li>
+            <li>
+                <div class="nav-item">
+                    <a href="#speakers">Invited Speakers</a>
+                </div>
+            </li>
+            <li>
+                <div class="nav-item">
+                    <a href="#accepted">Accepted Paper</a>
+                </div>
+            </li>
+            <li>
+                <div class="nav-item">
+                    <a href="#dates">Important dates</a>
+                </div>
+            </li>
+            <li>
+                <div class="nav-item">
+                    <a href="#org">Organizers</a>
+                </div>
+            </li>
+        </ul>
     </nav>
-
-  </section>
-
-
-  <section class="main-content">
-    <a id="overview" class="anchor" href="#overview" aria-hidden="true"><span class="octicon octicon-link"></span></a>
-    <h2>Overview</h2>
-
-    <p>
-      The increased availability of data and novel machine learning methods has sparked an interest in taking learning-based and data-driven approaches in many disciplines such as biology, social sciences, cognitive science, finance, and physics. To solve real-world problems, we require  integration of AI learning paradigms to enable the incorporation of expert knowledge, and dealing with uncertainty or complex structures in learning or inference. This, in turn, leads to a long path between formulating the problem and materializing the learning algorithm. The current practice often falls short in addressing it in a principle way and led to experimentation with variety of models and algorithms. While this gap slows down the progress in the AI field, it also makes it less accessible for domain experts outside the field. This problem calls for formalisms and languages which can integrate the existing disciplines in particular the symbolic and sub-symbolic approaches for combining learning and reasoning.
-      In this workshop we look the importance of the integrative paradigms from the lens of real-world applications for making AI accessible to domain experts and provide the means for: 1. High-level and declarative expression of the problem (i.e. the user specifies what she wants to achieve rather than how to achieve it), 2. Incorporating prior knowledge(e.g. laws of physics, or certain biological properties), 3. Reasoning over uncertain data/predictions, 4. Dealing with complex structures such as graphs and relations (e.g. to represent a social network or molecule), 5. Modularity, which allows the components of a program to be easily switched or reused.
-    </p>
-<!--    <p>-->
-<!--    <h4>Related communities</h4>-->
-<!--    Over the last few years the research community has tried to address these problems from multiple perspectives, most-->
-<!--    notably various approaches based on Probabilistic programming (PP), Logical Programming (LP), Constrained-->
-<!--    Conditional models (CCM) and other integrated paradigms such as Probabilistic Logical Programming (PLP) and-->
-<!--    Statistical relational learning (SRL). These paradigms and related languages aim at learning over probabilistic-->
-<!--    structures and exploiting knowledge in learning. Moreover, in the recent years several Deep Learning tools have-->
-<!--    created easy to use abstractions for programming model configurations for deep architectures which can is also-->
-<!--    connected to differentiable programming then.-->
-<!--    We aim at motivating the need for further research toward a unified framework in this area based on the above-->
-<!--    mentioned key existing paradigms as well as other related research such as First-order query languages, deductive-->
-<!--    databases (DDB), hybrid optimization and deep architectures for learning from data and knowledge and differentiable-->
-<!--    programming in our sense of learning based programs. We are interested in connecting these ideas related to-->
-<!--    Declarative Learning Based Programming Paradigm and investigate the required type of languages, representations and-->
-<!--    computational models to support such a paradigm. </p>-->
-
-<!--    <h4>Highlight</h4>-->
-<!--    Though the theme of this workshop remains generic as in the past versions, we will aim at emphasizing on ideas and-->
-<!--    opinions regarding considering domain knowledge in statistical and deep learning architectures and particularly the-->
-<!--    program representations to express data and knowledge for machine learning models.-->
-
-
-
-
-
-    <a id="topics" class="anchor" href="#topics" aria-hidden="true"><span class="octicon octicon-link"></span></a>
-    <h2>Topics Summary</h2>
-
-    The main research questions and topics of interest include, but are not limited to:
-    <ul>
-      <li>Declarative and imperative languages for combining learning and reasoning</li>
-      <li>Programming Languages, Domain specific languages, Libraries and software tools for integration of various learning and reasoning paradigms</li>
-      <li>Integration of probabilistic inference in training deep models</li>
-      <li>Integration of neuro and symbolic approaches</li>
-      <li>Integration of logical inference in training deep models</li>
-      <li>Using logical inference in deep learning</li>
-      <li>Integration of Deep Learning and Relational Learning</li>
-      <li>Integration of Deep learning and Constraint programming</li>
-      <li>Declarative languages and diffrentiable programming</li>
-      <li>Techniques for integration of learning and reasoning</li>
-      <li>Integration of declarative and procedural domain knowledge in learning</li>
-      <li>Integration of non-differentiable optimization models in learning</li>
-      <li>Integration of domain knowledge about   fairness, privacy, etc in designing learning models</li>
-    </ul>
-
-
-
-<!--    <ul>-->
-<!--      <li><strong>Vaishak Belle and Brendan Juba,</strong> <em>Implicitly Learning to Reason in First-Order Logic.</em>-->
-<!--      </li>-->
-<!--      <li><strong>Brendan Juba,</strong> <em>Query-driven PAC-learning for reasoning.</em></li>-->
-<!--      <li><strong>Taisuke Sato and Ryosuke Kojima,</strong> <em>Logical inference as cost minimization in vector-->
-<!--          spaces.</em></li>-->
-<!--      <li><strong>Tal Friedman and Guy Van den Broeck,</strong> <em>Towards Complex Querying of Probabilistic-->
-<!--          Classifiers.</em></li>-->
-<!--      <li><strong>Quan Guo, Andrzej Uszok and Parisa Kordjamshidi,</strong> <em>From Ontologies to Learning-Based-->
-<!--          Programs.</em></li>-->
-<!--      <li><strong>Alberto Camacho, Rodrigo Toro Icarte, Toryn Klassen, Richard Valenzano and Sheila McIlraith,</strong>-->
-<!--        <em>LTL and Beyond: Formal Languages for Goal Specification in Reinforcement Learning.</em>-->
-<!--      </li>-->
-<!--      <li><strong>Sebastijan Dumancic, Tias Guns, Wannes Meert and Hendrik Blockeel,</strong> <em>Learning Relational-->
-<!--          Representations with Auto-encoding Logic Programs.</em></li>-->
-<!--      <li><strong>Zhe Zeng and Guy Van den Broeck,</strong> <em>Efficient Search-Based Weighted Model Integration.</em>-->
-<!--      </li>-->
-<!--    </ul>-->
-
-    <a id="submission-info" class="anchor" href="#submission-info" aria-hidden="true"><span
-        class="octicon octicon-link"></span></a>
-    <h2>Submissions</h2>
-    We allow both short (2-4 pages) and long papers (6-8 pages) papers. We might accept extended abstracts of recently published work too.
-    Please follow the same guidelines of AAAI 2022 submission format for this workshop. This can be found at <a href="https://aaai.org/Conferences/AAAI-22/submission-guidelines/">AAAI 2022 submission guidelines</a>.
-    We encourage authors to use the Latex template of AAAI 2022 for a cleaner and better format for submission.
-
-    The submissions are accepted through OpenReview platform and the reviews of the papers will be available publicly through the same platform.
-    To submit your paper, please follow <a href="https://openreview.net/group?id=AAAI.org/2022/Workshop/CLeaR">this link</a>.
-
-    <p><a href="https://openreview.net/group?id=AAAI.org/2022/Workshop/CLeaR">OpenReview Submission Link</a></p>
-    <!--    We encourage contributions with either a technical paper (IJCAI style, 6 pages without references), a position-->
-<!--    statement (IJCAI style, 2 pages maximum) or an abstract of a published work. IJCAI Style files available <a-->
-<!--      href="https://www.ijcai.org/authors_kit">here</a>. Please make submissions via EasyChair, <a-->
-<!--      href="https://easychair.org/conferences/?conf=delbp2019">here</a>.-->
-
-
-    <a id="important-dates" class="anchor" href="#important-dates" aria-hidden="true"><span
-        class="octicon octicon-link"></span></a>
-    <h2>Important Dates</h2>
-    <ul>
-      <li>Submission Deadline: November 12th
-      </li>
-      <li>Notification: December 4th</li>
-      <li>Camera Ready:  December 15th</li>
-      <li>Workshop Day:  February 28-March 1</li>
-    </ul>
-    <p>
-      We are open  to the papers that have been submitted and got rejected in the main conference. However, the reviews should be submitted to us and those will be quickly meta-reviewed.
-    </p>
-
-    <a id="invitedSpeakers" class="anchor" href="#invited-speakers" aria-hidden="true"><span
-            class="octicon octicon-link"></span></a>
-    <h2>Invited Speakers</h2>
-    <!--    TBD-->
-    <ul>
-      <li><strong><a href="https://bryanwilder.github.io/">Bryan Wilder</a>, Carnegie Mellon University</strong></li>
-      <!--          <p> <strong> Title. Discrete Probabilistic Programming from First Principles. </strong> </p>-->
-      <p><span style="font-weight: bold">Bio</span>: He is a Schmidt Science Fellow at Harvard School of Public Health and Carnegie Mellon University. Starting in Fall 2022, he will be an Assistant Professor in the Machine Learning Department at CMU. he recently completed his PhD at Harvard University, where he was advised by Milind Tambe. His falls at the intersection of optimization, social networks, and machine learning. he designs algorithmic and data-driven methods to improve decision making under uncertainty and deploy these techniques for social impact, with a focus on applications in public health. he is particularly interested in interventions for marginalized populations. For example, to improve social network interventions for HIV prevention among homeless youth, he developed a combination of robust optimization techniques and algorithms for sampling social networks. His team intervention resulted in a field trial showing significantly improved adoption of protective behaviors. Other application areas include COVID-19 and tuberculosis treatment in India.</p>
-      <li><strong><a href="https://personal.utdallas.edu/~sriraam.natarajan/">Sriraam Natarajan</a>, University of Texas at Dallas</strong></li>
-      <!--          <p> <strong> Title. Discrete Probabilistic Programming from First Principles. </strong> </p>-->
-      <p><span style="font-weight: bold">Bio</span>: His research interests lie in the fields of Artificial Intelligence and Machine Learning and their application to healthcare problems. More specifically, he is interested in the areas of Relational Learning, Reinforcement Learning, Graphical Models, and Planning. Please read more about our projects and team on our team webpage.
-
-        Till 2017, he was a faculty member at Indiana University and previously he was an Assistant Professor at Wake Forest School of Medicine. he was a Post-Doc earlier at the Department of Computer Science in the University of Wisconsin Madison, working with Professors Jude Shavlik and David Page.
-
-        he completed my PhD in fall 2007 under Professor Prasad Tadepalli in the School of EECS at Oregon State University.</p>
-    </ul>
-
-    <a id="organizers" class="anchor" href="#organizers" aria-hidden="true"><span
-            class="octicon octicon-link"></span></a>
-    <h2>Organizing Committee</h2>
-
-    <table cellspacing="0" cellpadding="0" style="width:100%">
-      <tr>
-        <td width="32%">
-          <li><a href="">Parisa Kordjamshidi</a></li>
-        </td>
-        <td>Michigan State University, <a href="https://www.ihmc.us">IHMC</a></td>
-        <td>kordjams@msu.edu</td>
-      </tr>
-      <tr>
-        <td>
-          <li><a href="">Behrouz Babaki</a></li>
-        </td>
-        <td>Mila/HEC Montreal</td>
-        <td>behrouz.babaki@mila.quebec</td>
-      </tr>
-      <tr>
-        <td>
-          <li><a href="">Sebastijan Dumančić</a></li>
-        </td>
-        <td>KU Leuven</td>
-        <td>sebastijan.dumancic@cs.kuleuven.be</td>
-      </tr>
-      <tr>
-        <td>
-          <li><a href="">Alex Ratner</a> </li>
-        </td>
-        <td>University of Washington</td>
-        <td>ajratner@cs.washington.edu</td>
-      </tr>
-      <tr>
-        <td>
-          <li><a href="">Hossein Rajaby Faghihi</a></li>
-        </td>
-        <td>Michigan State University</td>
-        <td>rajabyfa@msu.edu</td>
-      </tr>
-      <tr>
-        <td>
-          <li><a href="">Hamid Karimian</a></li>
-        </td>
-        <td>Michigan State University</td>
-        <td>karimian@msu.edu</td>
-      </tr>
-    </table>
-    <p>Contact: <a href="mailto:clear-workshop@googlegroups.com?Subject=CleaR" target="_top">clear-workshop@googlegroups.com</a></p>
-
-    <h2>Advising Committee</h2>
-      <table>
-          <tr>
-              <td>
-                  <li><a href="">Dan Roth</a></li>
-              </td>
-              <td>University of Pennsylvania</td>
-              <td>danroth@seas.upenn.edu</td>
-          </tr>
-          <tr>
-              <td>
-                  <li><a href="">Guy Van Den Broeck</a></li>
-              </td>
-              <td>University of California Los Angeles</td>
-              <td>guyvdb@cs.ucla.edu</td>
-          </tr>
-      </table>
-
-
-    <a id="program-commitee" class="anchor" href="#program-commitee" aria-hidden="true"><span
-            class="octicon octicon-link"></span></a>
-
-    <h2>Program Committee</h2>
-
-    TBD
-
-<!--    <table cellspacing="0" cellpadding="0" float="left">-->
-<!--      <tr>-->
-<!--        <td>-->
-<!--          <li><a href="https://web.cs.ucla.edu/~guyvdb/">Guy Van den Broeck</a></li>-->
-<!--        </td>-->
-<!--        <td>University of California, Los Angeles</td>-->
-<!--      </tr>-->
-<!--      <tr>-->
-<!--        <td>-->
-<!--          <li><a href="">Avi Pfeffer</a></li>-->
-<!--        </td>-->
-<!--        <td>Charles River Analytics</td>-->
-<!--      </tr>-->
-<!--      <tr>-->
-<!--        <td>-->
-<!--          <li><a href="http://www.ai.sri.com/%7Ebraz/">Rodrigo de Salvo Braz</a></li>-->
-<!--        </td>-->
-<!--        <td>SRI International</td>-->
-<!--      </tr>-->
-<!--      <tr>-->
-<!--        <td>-->
-<!--          <li><a href="">Tias Guns</a></li>-->
-<!--        </td>-->
-<!--        <td>Vrije Universiteit Brussel (VUB)</td>-->
-<!--      </tr>-->
-<!--      <tr>-->
-<!--        <td>-->
-<!--          <li><a href="https://cs.stanford.edu/~chrismre/">Christopher Ré</a></li>-->
-<!--        </td>-->
-<!--        <td>Stanford University</td>-->
-<!--      </tr>-->
-<!--      <tr>-->
-<!--        <td>-->
-<!--          <li><a href="">Pasquale Minervini</a></li>-->
-<!--        </td>-->
-<!--        <td>University College London</td>-->
-<!--      </tr>-->
-<!--      <tr>-->
-<!--        <td>-->
-<!--          <li><a href="">Eli Bingham</a></li>-->
-<!--        </td>-->
-<!--        <td>Uber AI Labs</td>-->
-<!--      </tr>-->
-<!--      <tr>-->
-<!--        <td>-->
-<!--          <li><a href="https://ajratner.github.io/">Alexander Ratner</a></li>-->
-<!--        </td>-->
-<!--        <td>Stanford University</td>-->
-<!--      </tr>-->
-<!--      <tr>-->
-<!--        <td>-->
-<!--          <li><a href="">Golnoosh Farnadi</a></li>-->
-<!--        </td>-->
-<!--        <td>University of California, Santa Cruz</td>-->
-<!--      </tr>-->
-<!--      <tr>-->
-<!--        <td>-->
-<!--          <li><a href="">Behrouz Babaki</a></li>-->
-<!--        </td>-->
-<!--        <td>Katholieke Universiteit Leuven</td>-->
-<!--      </tr>-->
-<!--      <tr>-->
-<!--        <td>-->
-<!--          <li><a href="">Mark Kaminski</a></li>-->
-<!--        </td>-->
-<!--        <td>University of Oxford</td>-->
-<!--      </tr>-->
-<!--      <tr>-->
-<!--        <td>-->
-<!--          <li><a href="">Aneesha Bakharia</a></li>-->
-<!--        </td>-->
-<!--        <td>The University of Queensland</td>-->
-<!--      </tr>-->
-<!--      <tr>-->
-<!--        <td>-->
-<!--          <li><a href="">Nantia Makrynioti</a></li>-->
-<!--        </td>-->
-<!--        <td>AUEB</td>-->
-<!--      </tr>-->
-<!--      <tr>-->
-<!--        <td>-->
-<!--          <li><a href="">Dan Goldwasser</a></li>-->
-<!--        </td>-->
-<!--        <td>Purdue University</td>-->
-<!--      </tr>-->
-<!--      <tr>-->
-<!--        <td>-->
-<!--          <li><a href="">Mehul Bhatt</a></li>-->
-<!--        </td>-->
-<!--        <td>Örebro University, University of Bremen</td>-->
-<!--      </tr>-->
-<!--      <tr>-->
-<!--        <td>-->
-<!--          <li><a href="">Stephen Bach</a></li>-->
-<!--        </td>-->
-<!--        <td>Brown University</td>-->
-<!--      </tr>-->
-<!--      <tr>-->
-<!--        <td>-->
-<!--          <li><a href="">Matko Bošnjak</a></li>-->
-<!--        </td>-->
-<!--        <td>University College London</td>-->
-<!--      </tr>-->
-<!--      <tr>-->
-<!--        <td>-->
-<!--          <li><a href="">Sebastijan Dumancic</a></li>-->
-<!--        </td>-->
-<!--        <td>Katholieke Universiteit Leuven</td>-->
-<!--      </tr>-->
-<!--    </table>-->
-
-    <a id="accepted-papers" class="anchor" href="#accepted-papers" aria-hidden="true"><span
-            class="octicon octicon-link"></span></a>
-    <h2>Accepted Papers</h2>
-    TBD
-
-    <a id="schedule" class="anchor" href="#schedule" aria-hidden="true"><span class="octicon octicon-link"></span></a>
-    <h2>Schedule</h2>
-    TBD
-
-    <!-- <table class="table" style="width:100%">
-      <tr class="info">
-        <td width="96px">9:00-9:10</td>
-        <td>Opening remarks.</td>
-        <td>Organizers</td>
-      </tr>
-      <tr class="success">
-        <td>9:10-10:10</td>
-        <td><strong>Invited talk.</strong> Discrete Probabilistic Programming from First Principles.
-
-        </td>
-        <td>Guy van den Broeck</td>
-      </tr>
-      <tr>
-        <td>10:10-10:30</td>
-        <td><strong>Accepted paper 1.</strong> Implicitly Learning to Reason in First-Order Logic. <a
-            href="papers/DeLBP-2019_Accepted-1.pdf">[Paper]</a></td>
-        <td>Vaishak Belle and Brendan Juba</td>
-      </tr>
-
-      <tr class="info">
-        <td>10:30-11:00</td>
-        <td><strong>Coffee Break.</strong></td>
-        <td> </td>
-      </tr>
-
-      <tr>
-        <td>11:00-11:20</td>
-        <td><strong>Accepted paper 2.</strong> Logical inference as cost minimization in vector spaces. <a
-            href="papers/DeLBP-2019_Accepted-2.pdf">[Paper]</a></td>
-        <td>Taisuke Sato and Ryosuke Kojima</td>
-      </tr>
-      <tr>
-        <td>11:20-11:40</td>
-        <td><strong>Accepted paper 3.</strong> From Ontologies to Learning-Based Programs. <a
-            href="papers/DeLBP-2019_Accepted-3.pdf">[Paper]</a></td>
-        <td>Quan Guo, Andrzej Uszok and Parisa Kordjamshidi</td>
-      </tr>
-      <tr>
-        <td>11:40-12:00</td>
-        <td><strong>Accepted paper 4.</strong> Learning Relational Representations with Auto-encoding Logic Programs. <a
-            href="papers/DeLBP-2019_Accepted-4.pdf">[Paper]</a></td>
-        <td>Sebastijan Dumancic, Tias Guns, Wannes Meert and Hendrik Blockeel</td>
-      </tr>
-      <tr>
-        <td>12:00-12:20</td>
-        <td><strong>Accepted paper 5.</strong> Efficient Search-Based Weighted Model Integration. <a
-            href="papers/DeLBP-2019_Accepted-5.pdf">[Paper]</a></td>
-        <td>Zhe Zeng and Guy Van den Broeck. (Presenter: Paolo Morettin)</td>
-      </tr>
-
-      <tr class="info">
-        <td>12:20-14:10</td>
-        <td><strong>Lunch Break.</strong></td>
-        <td> </td>
-      </tr>
-
-      <tr class="success">
-        <td>14:10-15:10</td>
-        <td><strong>Invited talk.</strong> Exploiting Document Intent for Deep Understanding of Text: Case Studies in
-          Law and Molecular Biology.
-        </td>
-        <td>Leora Morgenstern</td>
-      </tr>
-      <tr>
-        <td>15:10-15:30</td>
-        <td><strong>Accepted paper 7.</strong> Query-driven PAC-learning for reasoning. <a
-            href="papers/DeLBP-2019_Accepted-7.pdf">[Paper]</a></td>
-        <td>Brendan Juba</td>
-      </tr>
-      <tr class="info">
-        <td>15:30-16:00</td>
-        <td><strong>Coffee Break.</strong></td>
-        <td> </td>
-      </tr>
-
-      <tr>
-        <td>16:00-16:20</td>
-        <td><strong>Accepted paper 8.</strong> LTL and Beyond: Formal Languages for Goal Specification in Reinforcement
-          Learning. <a href="papers/DeLBP-2019_Accepted-8.pdf">[Paper]</a></td>
-        <td>Alberto Camacho, Rodrigo Toro Icarte, Toryn Klassen, Richard Valenzano and Sheila McIlraith</td>
-      </tr>
-      <tr>
-        <td>16:20-17:20</td>
-        <td><strong>Panel discussion.</strong> </td>
-        <td> </td>
-      </tr>
-    </table> -->
-
-
-
-    <!--      <li><strong><a href="">Leora Morgenstern</a>, Systems & Technology Research</strong></li>-->
-
-    <!--      <p><strong> Title: Exploiting Document Intent for Deep Understanding of Text: Case Studies in Law and Molecular-->
-    <!--          Biology</strong>-->
-
-    <!--      <p>Abstract:Traditional machine reading systems focus on extracting a set of relations (fixed or flexible;-->
-    <!--        provided or learned) and their arguments from text. Such reading systems do reasonably well at extracting-->
-    <!--        explicit facts from documents. However, they also miss a great deal of information, sometimes the most important-->
-    <!--        information in a document.-->
-    <!--        I argue in this talk that a system that is able to recognize document intent will be able to extract much more-->
-    <!--        information from both unstructured and semi-structured documents. That is because understanding document intent-->
-    <!--        can provide information that is only implicit in text. This implicit information can help guide relation and-->
-    <!--        entity extraction and support further inferences from extracted triples.-->
-    <!--        I discuss two systems developed using this methodology — (1) The TAILCM system, which extract populated-->
-    <!--        templates from complex regulatory financial text; and (2) The LTR system, which extracted protein-protein-->
-    <!--        reactions from tables of unpredictable format in the molecular biological literature — and suggest how this-->
-    <!--        methodology can be extended to other complex documents.-->
-    <!--      </p>-->
-
-    <!--      &lt;!&ndash; <p> <strong> Title. TBD </strong> </p> !&ndash;&gt;-->
-    <!--      &lt;!&ndash;</p> -->
-    <!--<p>-->
-    <!--Bio. Sebastian Riedel is a reader in Natural Language Processing and Machine Learning at the University College London (UCL), where he is leading the Machine Reading lab. He is also the head of research at Bloomsbury AI and an Allen Distinguished Investigator. He works in the intersection of Natural Language Processing and Machine Learning, and focuses on teaching machines how to read and reason. He was educated in Hamburg-Harburg (Dipl. Ing) and Edinburgh (MSc., PhD), and worked at the University of Massachusetts Amherst and Tokyo University before joining UCL.-->
-    <!--</p>-->
-
-    <!--  <li><strong><a-->
-    <!--  href="http://www.cs.cmu.edu/~wcohen/">William Cohen</a>, Carnegie Mellon University</strong></li>-->
-    <!--<p> <strong> Probabilistic Logics and Declarative Statistical Learning </strong>-->
-
-    <!--<p>Abstract. TensorLog is a simple probabilistic first-order logic in which logical-->
-    <!--queries can be compiled into differentiable functions in a neural-->
-    <!--network infrastructure, such as Tensorflow or Theano. This leads to a-->
-    <!--close integration of probabilistic logical reasoning with-->
-    <!--deep-learning infrastructure: in particular, it enables-->
-    <!--high-performance deep learning frameworks to be used for learning the-->
-    <!--parameters of a probabilistic logic.  We show how TensorLog's-->
-    <!--integration with deep learners allows one to express logical-->
-    <!--constraints on learning for tasks such as question-answering against a-->
-    <!--knowledge base and semi-supervised learning for network data.-->
-    <!--</p>-->
-    <!--<p>-->
-    <!--Bio. William Cohen received his bachelor's degree in Computer Science from Duke University in 1984, and a PhD in Computer Science from Rutgers University in 1990. From 1990 to 2000 Dr. Cohen worked at AT&T Bell Labs and later AT&T Labs-Research, and from April 2000 to May 2002 Dr. Cohen worked at Whizbang Labs, a company specializing in extracting information from the web. Dr. Cohen is a past president of the International Machine Learning Society. In the past he has also served as an action editor for the the AI and Machine Learning series of books published by Morgan Claypool, for the journal Machine Learning, the journal Artificial Intelligence, the Journal of Machine Learning Research, and the Journal of Artificial Intelligence Research. He was General Chair for the 2008 International Machine Learning Conference, held July 6-9 at the University of Helsinki, in Finland; Program Co-Chair of the 2006 International Machine Learning Conference; and Co-Chair of the 1994 International Machine Learning Conference. Dr. Cohen was also the co-Chair for the 3rd Int'l AAAI Conference on Weblogs and Social Media, which was held May 17-20, 2009 in San Jose, and was the co-Program Chair for the 4rd Int'l AAAI Conference on Weblogs and Social Media. He is a AAAI Fellow, and was a winner of the 2008 the SIGMOD "Test of Time" Award for the most influential SIGMOD paper of 1998, and the 2014 SIGIR "Test of Time" Award for the most influential SIGIR paper of 2002-2004.-->
-    <!-- </p>-->
-    <!-- <li><strong> <a href="">Avi Pfeffer</a>, Charles River Analytics</strong></li> -->
-
-
-    <!--<strong> Scruff: A Deep Probabilistic Cognitive Architecture </strong>-->
-    <!-- -->
-    <!--<p>Abstract. Probabilistic programming is able to build rich models of systems that combine prior knowledge with the ability to learn from data. One of the reasons for the success of deep learning is the ability to discover hidden features of the domain through complex multi-layered, nonlinear functions; another reason is the ability to learn and reason effectively about these functions in a scalable way. Our goal is to develop generative probabilistic programs that have the same properties. -->
-    <!-- -->
-    <!--Recent trends in cognitive science view perception and action in a unified framework based on downward prediction using a generative probabilistic model and upward propagation of errors. Scruff is intended to be a probabilistic programming cognitive architecture based on this idea. Scruff provides many different mechanisms for accomplishing intelligent behavior, all within a neat generative probabilistic framework. Scruff uses Haskell’s rich type system to create a library of models, where each kind of model is able to support certain kinds of inference efficiently. The type system ensures that only compatible models can be linked together. Current mechanisms include learning parameters via gradient ascent backpropagation (as in deep neural networks), reinforcement learning to perform inference, conditioning on various kinds of evidence, and different ways of computing probabilities. Using Scruff, we are exploring a range of new kinds of deep models, such as deep noisy-or networks, deep probabilistic context free grammars, and deep conditional linear Guassian networks.</p>-->
-    <!--<p>-->
-    <!--  Bio. Dr. Avi Pfeffer is Chief Scientist at Charles River Analytics. Dr. Pfeffer is a leading researcher on a variety of computational intelligence techniques including probabilistic reasoning, machine learning, and computational game theory. Dr. Pfeffer has developed numerous innovative probabilistic representation and reasoning frameworks, such as probabilistic programming, which enables the development of probabilistic models using the full power of programming languages, and statistical relational learning, which provides the ability to combine probabilistic and relational reasoning. He is the lead developer of Charles River Analytics’ Figaro probabilistic programming language. As an Associate Professor at Harvard, he developed IBAL, the first general-purpose probabilistic programming language. While at Harvard, he also produced systems for representing, reasoning about, and learning the beliefs, preferences, and decision-making strategies of people in strategic situations. Prior to joining Harvard, he invented object-oriented Bayesian networks and probabilistic relational models, which form the foundation of the field of statistical relational learning. Dr. Pfeffer serves as Action Editor of the Journal of Machine Learning Research and served as Associate Editor of Artificial Intelligence Journal and as Program Chair of the Conference on Uncertainty in Artificial Intelligence. He has published many journal and conference articles and is the author of a text on probabilistic programming. Dr. Pfeffer received his Ph.D. in computer science from Stanford University and his B.A. in computer science from the University of California, Berkeley.-->
-    <!-- -->
-    <!--</p>-->
-    <!--<li> <strong> <a href="">Eli Bingham,</a> Uber AI Labs </strong></li>  -->
-
-    <!--<strong>Pyro: Programmable Probabilistic Programming with Python and PyTorch </strong>-->
-    <!--<p>-->
-    <!--  Abstract. Most structured probabilistic models in modern AI research are still implemented from scratch as one-off systems, slowing their development and limiting their scope and extensibility.  Universal probabilistic programming languages promise to reduce this burden, but are challenged in practice by more advanced models that often require high-performance inference engines that can be heavily modified in model-specific ways.  We present Pyro, a probabilistic programming language embedded in Python designed to enable such flexibility.  To scale to large datasets and high-dimensional models, Pyro leverages stochastic variational inference algorithms and probability distributions built on top of PyTorch, a modern deep learning framework.  To accommodate complex or model-specific algorithmic behavior, Pyro leverages Poutine, a library of composable building blocks for modifying the behavior of probabilistic programs.  We show that these two features make it possible to use Pyro to successfully implement a range of deep probabilistic models, including Attend-Infer-Repeat (AIR), a recursively structured generative model of images.-->
-    <!--  </p>-->
-    <!--<p> Bio. Eli Bingham is a research scientist at Uber AI Labs, where he is one of the core developers of the probabilistic programming language Pyro.  He was previously an early employee and research scientist at Geometric Intelligence, which became Uber AI Labs, and a PhD student at NYU.</p>-->
-    <!--  </ul>-->
-
-    <!--<a id="accepted-papers" class="anchor" href="#accepted-papers" aria-hidden="true"><span class="octicon octicon-link"></span></a><h2>Invited Papers</h2>-->
-    <!--<ul>-->
-    <!-- <li> <strong>Alex Ratner, Stephen H. Bach, Henry Ehrenberg, Jason Fries, Sen Wu, Christopher Ré,</strong><em> Snorkel: Rapid Training Data Creation with Weak Supervision.</em></li>-->
-    <!-- </ul>-->
-    <!-- <a id="accepted-papers" class="anchor" href="#accepted-papers" aria-hidden="true"><span class="octicon octicon-link"></span></a><h2>Accepted Papers</h2>-->
-
-    <!--<ul>-->
-    <!--<li>-->
-    <!--<strong> -->
-    <!--Golnoosh Farnadi, Behrouz Babaki and Lise Getoor,</strong><em> Fairness-aware Relational Learning and Inference.</em> </li>-->
-
-    <!--<li> <strong>Michelangelo Diligenti, Soumali Roychowdhury and Marco Gori,</strong><em> Image Classification Using Deep Learning and Prior Knowledge.</em>-->
-    <!--</li>-->
-    <!-- -->
-    <!--&ndash;&gt;-->
-
-    <!--    </ul>-->
-
-
-    <!--<div>
-<table cellspacing="0" cellpadding="0" float="left">
-<tr>
-<td width="45%">
-<li><a href="http://people.cs.kuleuven.be/%7Eguy.vandenbroeck/">Guy
-  Van den Broeck</a> </td> <td>University of California, Los Angeles</td></li>
-  </tr>
- <tr>
-<td><li>Nikolaos Vasiloglou</td><td>Ismion Inc</li></td>
-</tr>
-  <tr>
-<td><li><a href="http://sameersingh.org">Sameer Singh</a></td><td> University of California, Irvine </td></li>
-</tr>
-<tr>
-<td>
-<li><a href="http://www.ai.sri.com/%7Ebraz/">Rodrigo de Salvo Braz</a></td><td> SRI International</td></li>
-</tr>
-<tr>
-<td><li>Tias Guns</td><td>Vrije University of Brussels</li></td>
-</tr>
-<tr>
-<td width="47%">
-<li> Christos Christodoulopoulos</td> <td>Amazon Cambridge, UK</li></td>
-</tr>
-<tr>
-<td><li>William Wang</td><td>University of California, Santa Barbara</li></td>
-</tr>
-<tr>
-<td><li>Martin Mladenov</td><td>Technical University of Dortmund</li></td>
-</tr>
-<tr>
-<td><li>Kai-Wei Chang</td><td> University of California, Los Angeles</li></td>
-</tr>
-<tr>
-<td><li>Umar Manzoor</td><td> Tulane University</li></td>
-</tr>
-<tr>
-<td><li>Mark Kaminski</td><td> University of Oxford</li></td>
-</tr>
-<tr>
-<td><li>Avi Pfeffer</td><td>Charles River Analytics</li></td>
-</tr>
-</table>
-<p>
-<table style="display: inline-block; border: 0;align-content: center;">
-<tr>
-<td><img style="width: 130px; display: block; height: auto;" src="ihmc_logo.png"></a></td></tr>
-</table>
+    <script>
+        const btn = document.getElementById('nav-btn')
+        const nav = document.getElementById('nav');
+    
+        btn.addEventListener('click', () => {
+            nav.classList.toggle('active');
+            btn.classList.toggle('active');
+        })
+    </script>
+    <!-- Bootstrap Static Header -->
+<div id="head-container">
+<div style="background: url(images/imageonline-co-overlayed-image\ \(1\).jpg)" class="jumbotron bg-cover text-white" id="header">
+    <div class="container py-5 text-center" id="header-text">
+        <h1 class="display-4 font-weight-bold">CLeaR 2022</h1>
+        <p class="font-italic mb-0">The First International Workshop on Combining Learning and Reasoning: Programming Languages, Formalisms, and Representations
+            <br>
+            In conjunction with the 36th AAAI conference on artificial intelligence
+            <a href="https://ijcai19.org">(AAAI-2022)</a>, February 22-March 1, 2022, Vancouver, BC, Canada
+        </p>
+        <p class="font-italic"><span>Workshop Day: TBD, <br>
+            Location: TBD</span>
+        </p>
+    </div>
 </div>
-<a href="https://www.ihmc.us"><img style="width: 140px; height: auto;" src="AS-267480109387779@1440783635465_l.jpeg" align="right"></a>-->
+</div>
+<nav class="nav flex-column nph" id="navbar">
+    <a class="nav-link active" aria-current="page" href="#overview" id="navitem1">Overview</a>
+    <a class="nav-link" href="#topics">Topics</a>
+    <a class="nav-link" href="#schedule">Schedule</a>
+    <a class="nav-link" href="#speakers">Invited Speakers</a>
+    <a class="nav-link" href="#accepted">Accepted Papers</a>
+    <a class="nav-link" href="#dates">Important Dates</a>
+    <a class="nav-link" href="#org">Organizers</a>
+    <!-- <a class="nav-link" href="#">Link</a> -->
+</nav>
+<div id="info">
+    <div id="overview">
+        <h1>Overview</h1>
+        <p>
+            The increased availability of data and novel machine learning methods has sparked an interest in taking learning-based and data-driven approaches in many disciplines such as biology, social sciences, cognitive science, finance, and physics. To solve real-world problems, we require  integration of AI learning paradigms to enable the incorporation of expert knowledge, and dealing with uncertainty or complex structures in learning or inference. This, in turn, leads to a long path between formulating the problem and materializing the learning algorithm. The current practice often falls short in addressing it in a principle way and led to experimentation with variety of models and algorithms. While this gap slows down the progress in the AI field, it also makes it less accessible for domain experts outside the field. This problem calls for formalisms and languages which can integrate the existing disciplines in particular the symbolic and sub-symbolic approaches for combining learning and reasoning.
+            In this workshop we look the importance of the integrative paradigms from the lens of real-world applications for making AI accessible to domain experts and provide the means for: 1. High-level and declarative expression of the problem (i.e. the user specifies what she wants to achieve rather than how to achieve it), 2. Incorporating prior knowledge(e.g. laws of physics, or certain biological properties), 3. Reasoning over uncertain data/predictions, 4. Dealing with complex structures such as graphs and relations (e.g. to represent a social network or molecule), 5. Modularity, which allows the components of a program to be easily switched or reused.
+        </p>
+        <!-- <h3>Challenge for domain experts</h3>
+        <span>
+            However, current technologies offer cumbersome solutions along multiple dimensions. 
+            Some of this include, Interaction with messy naturally occurring data; Necessity for 
+            extensive programming; Necessity of exploiting various learning paradigms and techniques; 
+            and Extensive experimental exploration for model selection, feature selection, parameter 
+            tuning due to the lack of theoretical evidence about the effectiveness of various models.
+        </span>
+        <h3>High-level goal and implied directions</h3>
+        <span>
+            <p>
+                DeLBP workshop aims at highlighting the issues and challenges that arise for having a 
+            declarative data driven problem-solving paradigm. This paradigm facilitates and simplifies 
+            the design and the development of intelligent real world applications that consider 
+            learning from data and reasoning based on knowledge. It highlights the challenges in 
+            making machine learning accessible to various domain experts and application programmers.
+            </p>
+            <p>
+                Conventional programming languages have not been primarily designed to offer help for the 
+            above-mentioned challenges. To Achieve the DeLBP goals there is a need to go beyond designing 
+            tools for classic machine learning new innovative abstractions and enriching the existing solutions 
+            and frameworks with the capabilities in:
+            </p>
+            <p>
+                Specifying the requirements of the application at a high abstraction level; 
+                Exploiting the expert knowledge in learning; Dealing with uncertainty in data 
+                and knowledge in various layers of the application program; Using representations 
+                that support flexible relational feature engineering; Using representations that 
+                support flexible reasoning and structure learning; Ability to reuse, combining and 
+                chaining models and perform flexible inference on complex models or pipelines of 
+                decision making; Integrating a range of learning and inference algorithms; Closing 
+                the loop of moving from data to knowledge and exploiting knowledge to generate data; 
+                and finally having a unified programming environment to design application programs.
+            </p>
+        </span>
+        <h3>Related communities</h3>
+        <span>
+            Over the last few years the research community has tried to address these problems 
+            from multiple perspectives, most notably various approaches based on Probabilistic 
+            programming (PP), Logical Programming (LP), Constrained Conditional models (CCM) and 
+            other integrated paradigms such as Probabilistic Logical Programming (PLP) and Statistical 
+            relational learning (SRL). These paradigms and related languages aim at learning over 
+            probabilistic structures and exploiting knowledge in learning. Moreover, in the recent 
+            years several Deep Learning tools have created easy to use abstractions for programming 
+            model configurations for deep architectures. We aim at motivating the need for further 
+            research toward a unified framework in this area based on the above mentioned key existing 
+            paradigms as well as other related research such as First-order query languages, database 
+            management systems (DBMS), deductive databases (DDB), hybrid optimization and deep 
+            architectures for learning from data and knowledge. We are interested in connecting these 
+            ideas towards developing a Declarative Learning Based Programming Paradigm and investigate 
+            the required type of languages, representations and computational models to support such a 
+            paradigm.
+        </span>
+        <h3>Highlight</h3>
+        <span>
+            Though the theme of this workshop remains generic as in the past versions, we will 
+            aim at emphasizing on ideas and opinions regarding conceptual representations of deep 
+            learning architectures that connect various computational units to the semantics of 
+            declarative data and knowledge representations. We also encourage submissions on learning 
+            to learn programs.
+        </span> -->
+    </div>
+    <div id="topics">
+        <h1>Topics Summary</h1>
+        The main research questions and topics of interest include, but are not limited to:<br>
+        <ul>
+            <li>Declarative and imperative languages for combining learning and reasoning</li>
+            <li>Programming Languages, Domain specific languages, Libraries and software tools for integration of various learning and reasoning paradigms</li>
+            <li>Integration of probabilistic inference in training deep models</li>
+            <li>Integration of neuro and symbolic approaches</li>
+            <li>Integration of logical inference in training deep models</li>
+            <li>Using logical inference in deep learning</li>
+            <li>Integration of Deep Learning and Relational Learning</li>
+            <li>Integration of Deep learning and Constraint programming</li>
+            <li>Declarative languages and diffrentiable programming</li>
+            <li>Techniques for integration of learning and reasoning</li>
+            <li>Integration of declarative and procedural domain knowledge in learning</li>
+            <li>Integration of non-differentiable optimization models in learning</li>
+            <li>Integration of domain knowledge about   fairness, privacy, etc in designing learning models</li>
+        </ul>
+    </div>
+    <div id="submissions">
+        <h1>Submissions</h1>
+        We allow both short (2-4 pages) and long papers (6-8 pages) papers. We might accept extended 
+        abstracts of recently published work too.
+        Please follow the same guidelines of AAAI 2022 submission format for this workshop. 
+        This can be found at <a href="https://aaai.org/Conferences/AAAI-22/submission-guidelines/">
+            AAAI 2022 submission guidelines</a>.
+        We encourage authors to use the Latex template of AAAI 2022 for a cleaner and better format f
+        or submission.
 
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-4 col-lg-offset-4">
-          <a id="sponsor" class="anchor" href="#sponsor" aria-hidden="true"><span
-                  class="octicon octicon-link"></span></a>
-          <h2 style="text-align: center">Sponsors</h2>
-          <br>
-          <a class="center-block" style="margin: 0 auto" href="https://snorkel.ai/"><img class="center-block" src="https://snorkel.ai/wp-content/uploads/2020/09/logo.svg" alt="Snorkel.ai" style="filter: brightness(1) invert(1)" width="110%"></a> <br>
-          <p style="text-align: center">
-<!--            Snorkel <br>-->
-            AI beyond manual labeling
-          </p>
-        </div>
-      </div>
+        The submissions are accepted through OpenReview platform and the reviews of the papers will 
+        be available publicly through the same platform.
+        To submit your paper, please follow 
+        <a href="https://openreview.net/group?id=AAAI.org/2022/Workshop/CLeaR">OpenReview
+            Submission Link</a>.
 
     </div>
-    <footer class="site-footer">
+    <div id="dates">
+        <h1>Important Dates</h1>
+        <table id="date-table" class="scrollmenu table table-success table-striped">
+            <tr class="table-item table">
+                <td><strong>Name</strong></td>
+                <td><strong>Date</strong></td>
+            </tr>
+            <tr class="table-item">
+                <td>Submission Deadline</td>
+                <td>November 12, 2021</td>
+            </tr>
+            <tr class="table-item">
+                <td>Notification</td>
+                <td>December 4, 2021</td>
+            </tr>
+            <tr class="table-item">
+                <td>Camera Ready</td>
+                <td>December 15, 2021</td>
+            </tr>
+            <tr class="table-item">
+                <td>Workshop Day</td>
+                <td>February 28-March 1, 2022</td>
+            </tr>
+            <!-- <tr class="table-item">
+                <td></td>
+                <td></td>
+            </tr> -->
+        </table>
+        <p>
+            We are open  to the papers that have been submitted to the main conference. However, the reviews should be submitted to us and those will be quickly meta-reviewed.
+        </p>
+    </div>
+    <div id="speakers">
+        <h1>Invited Speakers</h1>
+        <div class="row row-cols-1 row-cols-md-3 g-4 h-100">
+            <div class="col">
+              <div class="card h-100">
+                <img src="images/bryan_new.jpg" class="card-img-top spk" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title"><a href="https://bryanwilder.github.io/">Bryan Wilder</a>
+                    , Carnegie Mellon University</h5>
+                  <p class="card-text"><span style="font-weight: bold">Bio</span>: He is a Schmidt 
+                    Science Fellow at Harvard School of Public Health and Carnegie Mellon University. 
+                    Starting in Fall 2022, he will be an Assistant Professor in the Machine Learning 
+                    Department at CMU. he recently completed his PhD at Harvard University, where 
+                    he was advised by Milind Tambe. His falls at the intersection of optimization, 
+                    social networks, and machine learning. he designs algorithmic and data-driven 
+                    methods to improve decision making under uncertainty and deploy these techniques 
+                    for social impact, with a focus on applications in public health. he is 
+                    particularly interested in interventions for marginalized populations. 
+                    For example, to improve social network interventions for HIV prevention among 
+                    homeless youth, he developed a combination of robust optimization techniques and 
+                    algorithms for sampling social networks. His team intervention resulted in a field 
+                    trial showing significantly improved adoption of protective behaviors. Other 
+                    application areas include COVID-19 and tuberculosis treatment in India.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <img src="images/Natarajan_Sriraam_0111_web.jpg" class="card-img-top spk" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title"><a href="https://personal.utdallas.edu/~sriraam.natarajan/">
+                    Sriraam Natarajan</a>, University of Texas at Dallas</h5>
+                  <p class="card-text"><span style="font-weight: bold">Bio</span>: His research 
+                    interests lie in the fields of Artificial Intelligence and Machine Learning and 
+                    their application to healthcare problems. More specifically, he is interested 
+                    in the areas of Relational Learning, Reinforcement Learning, Graphical Models, 
+                    and Planning. Please read more about our projects and team on our team webpage.
+                    Till 2017, he was a faculty member at Indiana University and previously he was an 
+                    Assistant Professor at Wake Forest School of Medicine. he was a Post-Doc earlier 
+                    at the Department of Computer Science in the University of Wisconsin Madison, 
+                    working with Professors Jude Shavlik and David Page.
+                    He completed his PhD in fall 2007 under Professor Prasad Tadepalli in the 
+                    School of EECS at Oregon State University.
+                </p>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="col">
+              <div class="card h-100">
+                <img src="images/msu1.jpg" class="card-img-top spk" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <img src="images/msu1.jpg" class="card-img-top spk" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                </div>
+              </div>
+            </div> -->
+          </div>
+    </div>
+    <div id="org">
+        <h1>Organizing Committee</h1>
+        <table id="org-table" class="scrollmenu table table-success table-striped">
+            <tr class="table-item">
+                <td width="32%">
+                    <li><a href="">Parisa Kordjamshidi</a></li>
+                </td>
+                <td>Michigan State University, <a href="https://www.ihmc.us">IHMC</a></td>
+                <td>kordjams@msu.edu</td>
+            </tr>
+            <tr class="table-item">
+                <td>
+                    <li><a href="">Behrouz Babaki</a></li>
+                </td>
+                <td>Mila/HEC Montreal</td>
+                <td>behrouz.babaki@mila.quebec</td>
+            </tr>
+            <tr class="table-item">
+                <td>
+                    <li><a href="">Sebastijan Dumančić</a></li>
+                </td>
+                <td>KU Leuven</td>
+                <td>sebastijan.dumancic@cs.kuleuven.be</td>
+            </tr>
+            <tr class="table-item">
+                <td>
+                    <li><a href="">Alex Ratner</a> </li>
+                </td>
+                <td>University of Washington</td>
+                <td>ajratner@cs.washington.edu</td>
+            </tr>
+            <tr class="table-item">
+                <td>
+                    <li><a href="">Hossein Rajaby Faghihi</a></li>
+                </td>
+                <td>Michigan State University</td>
+                <td>rajabyfa@msu.edu</td>
+            </tr>
+            <tr class="table-item">
+                <td>
+                    <li><a href="">Hamid Karimian</a></li>
+                </td>
+                <td>Michigan State University</td>
+                <td>karimian@msu.edu</td>
+            </tr>
+            <!-- <tr class="table-item">
+                <td>Name</td>
+                <td>University</td>
+                <td>Mail</td>
+            </tr>
+            <tr class="table-item">
+                <td>Name</td>
+                <td>University</td>
+                <td>Mail</td>
+            </tr>
+            <tr class="table-item">
+                <td>Name</td>
+                <td>University</td>
+                <td>Mail</td>
+            </tr> -->
+        </table>
+        <p>Contact: <a href="mailto:clear-workshop@googlegroups.com?Subject=CleaR" target="_top">
+            clear-workshop@googlegroups.com</a></p>
+    </div>
+    <div id="prog">
+        <h1>Advising Committee</h1>
+        <!-- TBD -->
+        <table id="prog-table" class="scrollmenu table table-success table-striped">
+            <tr class="table-item">
+                <td>
+                    <li><a href="">Dan Roth</a></li>
+                </td>
+                <td>University of Pennsylvania</td>
+                <td>danroth@seas.upenn.edu</td>
+            </tr>
+            <tr class="table-item">
+                <td>
+                    <li><a href="">Guy Van Den Broeck</a></li>
+                </td>
+                <td>University of California Los Angeles</td>
+                <td>guyvdb@cs.ucla.edu</td>
+            </tr>
+            <!-- <tr class="table-item">
+                <td>Name</td>
+                <td>University</td>
+                <td>Mail</td>
+            </tr>
+            <tr class="table-item">
+                <td>Name</td>
+                <td>University</td>
+                <td>Mail</td>
+            </tr>
+            <tr class="table-item">
+                <td>Name</td>
+                <td>University</td>
+                <td>Mail</td>
+            </tr> -->
+        </table>
+    </div>
+    <div id="accepted">
+        <h1>Accepted Papers</h1>
+        TBD
+        <!-- <ul>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, asperiores.
+            </li>
+        </ul> -->
+    </div>
+    <div id="schedule">
+        <h1>Schedule</h1>
+        TBD
+        <!-- <table id="sch-table">
+            <tr class="table-item">
+                <td>Time</td>
+                <td>Name</td>
+                <td>Topic</td>
+            </tr>
+            <tr class="table-item">
+                <td>Time</td>
+                <td>Name</td>
+                <td>Topic</td>
+            </tr>
+            <tr class="table-item">
+                <td>Time</td>
+                <td>Name</td>
+                <td>Topic</td>
+            </tr>
+            <tr class="table-item">
+                <td>Time</td>
+                <td>Name</td>
+                <td>Topic</td>
+            </tr>
+            <tr class="table-item">
+                <td>Time</td>
+                <td>Name</td>
+                <td>Topic</td>
+            </tr>
+        </table> -->
+    </div> <br>
+    <div id="sponsor">
+        <span style="text-align: center" class="sponsor-item">Sponsored by </span>
+        <div class="row">
+            <div class="col-lg-4">
+            </div>
+            <div class="col-lg-8">
+                <a class="center-block" style="margin: 0 auto; display: inline" href="https://snorkel.ai/"><img
+                        class="center-block" src="https://snorkel.ai/wp-content/uploads/2020/09/logo.svg"
+                        alt="Snorkel.ai" style="filter: brightness(1) invert(1)" id="sponsor-logo"></a>
+                <span style="text-align: center" id="footer-text">
+                                            AI beyond manual labeling
+                            </span>
+            </div>
+        </div>
 
-      <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>
-        using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a
-          href="https://twitter.com/jasonlong">Jason Long</a>.</span>
-    </footer>
 
-  </section>
+<!--        <p style="text-align: center" id="footer-text">-->
+<!--            &lt;!&ndash;            Snorkel <br>&ndash;&gt;-->
+<!--                        AI beyond manual labeling-->
+<!--        </p>-->
+    </div>
+<!--    <div id="footer">-->
+<!--        <footer class="site-footer">-->
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-  <!-- Start of StatCounter Code for Default Guide -->
-  <script type="text/javascript">
+<!--            <span class="site-footer-credits">This page was generated by -->
+<!--                <a href="https://pages.github.com">GitHub Pages</a>.-->
+<!--            </span>-->
+<!--        </footer>-->
+<!--    </div>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <!-- Start of StatCounter Code for Default Guide -->
+    <script type="text/javascript">
     var sc_project = 11083511;
     var sc_invisible = 1;
     var sc_security = "2f97c6cf";
@@ -640,13 +472,14 @@
     document.write("<sc" + "ript type='text/javascript' src='" +
       scJsHost +
       "statcounter.com/counter/counter.js'></" + "script>");
-  </script>
-  <noscript>
+    </script>
+    <noscript>
     <div class="statcounter"><a title="web analytics" href="http://statcounter.com/" target="_blank"><img
           class="statcounter" src="//c.statcounter.com/11083511/0/2f97c6cf/1/" alt="web
-analytics"></a></div>
-  </noscript>
-  <!-- End of StatCounter Code for Default Guide -->
+    analytics"></a></div>
+    </noscript>
+    <!-- End of StatCounter Code for Default Guide -->
+</div>
 </body>
-
 </html>
+
