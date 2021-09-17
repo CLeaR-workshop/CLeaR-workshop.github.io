@@ -2,6 +2,9 @@
     background-size: cover !important;
 }
 
+div h1{
+    text-align: center;
+}
 *{
     box-sizing: content-box;
 }
@@ -138,6 +141,7 @@ body{
 
 #overview{
     background-color: rgb(225, 231, 226);
+    padding: 10pt;
 }
 
 table{
@@ -260,4 +264,8 @@ table{
 .col .card .card-body{
     width: 100%;
     text-align: center;
+}
+
+.card-body .card-text {
+    text-align: left;
 }
