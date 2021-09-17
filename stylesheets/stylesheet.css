@@ -248,6 +248,7 @@ table{
 
 .col .spk{
     height: auto;
+    max-height: 220pt;
     width: 100%;
 }
 
