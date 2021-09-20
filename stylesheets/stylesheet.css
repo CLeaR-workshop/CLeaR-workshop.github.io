@@ -36,7 +36,7 @@ body{
     position: fixed;
     top: 0;
     left: 0;
-    background-color: black;
+    background-color: darkslategrey;
     color: white;
     height: 100%;
     z-index: 5;
@@ -65,11 +65,12 @@ body{
 }
 
 #navbar a{
-    color: rgb(167, 233, 167);
+    /*color: rgb(167, 233, 167);*/
+    color: whitesmoke;
 }
 
 #navbar a:hover{
-    color: white;
+    color: black;
 }
 
 #main #nav ul{
