@@ -334,3 +334,27 @@ table{
     }
 } */
 
+.col .spk{
+    height: auto;
+    max-height: 220pt;
+    width: 100%;
+}
+
+.col .card{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#overview, #topics, #speakers, #submissions, #dates, #org, #prog, #accepted, #schedule, #sponsor{
+    margin-top: 2rem;
+}
+
+.col .card .card-body{
+    width: 100%;
+    text-align: center;
+}
+
+.card-body .card-text {
+    text-align: left;
+}
