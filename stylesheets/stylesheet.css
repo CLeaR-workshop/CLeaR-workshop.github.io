@@ -201,7 +201,7 @@ table{
     height: auto;
     width: auto;
     max-height: 150pt;
-    margin-left: auto;
+    /*margin-left: auto;*/
     /* border: solid; */
 }
 
@@ -242,7 +242,7 @@ table{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    margin-right: auto;
+    /*margin-right: auto;*/
 }
 
 @media only screen and (max-width: 549px){
@@ -290,6 +290,7 @@ table{
         height: 150pt;
         width: 150pt;
         margin-right: auto;
+        margin-left: auto;
     }
     #spk-flex .col .card.h-100{
         display: flex;
@@ -337,6 +338,7 @@ table{
 .col .spk{
     height: auto;
     max-height: 220pt;
+    max-width: 220pt;
     width: 100%;
 }
 
