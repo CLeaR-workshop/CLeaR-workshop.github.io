@@ -132,17 +132,8 @@ body{
     margin-right: auto;
 }
 
-#topics ul li{
+#progc li{
     text-align: left;
-}
-
-#org li, #prog li{
-    text-align: left;
-}
-
-#overview{
-    background-color: rgb(225, 231, 226);
-    padding: 10pt;
 }
 
 table{
@@ -154,95 +145,12 @@ table{
     overflow-x: auto;
 }
 
-#org, #prog{
+#progc{
     overflow-x: auto;
 }
 
-#speakers{
-    justify-content: left;
-    align-items: left;
-    min-width: 100%;
-}
-
-#spk-flex{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-width: 100%;
-}
-
-#sponsor-logo{
-    height: 100px;
-    width: 150px;
-}
-
-#sponsor{
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
-    align-items: left;
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-#footer{
-    margin: 2rem auto;
-    font-size: 0.7rem;
-    text-align: center;
-}
-
-#footer-text{
-    font-size: 1.2rem;
-}
-
-.col .spk{
-    padding: 0.8rem;
-    height: auto;
-    width: auto;
-    max-height: 150pt;
-    /*margin-left: auto;*/
-    /* border: solid; */
-}
-
-.col .card{
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-#overview, #topics, #speakers, #submissions, #dates, #org, #prog, #accepted, #schedule, #sponsor{
+#progc{
     margin-top: 2rem;
-}
-
-.col .card .card-body{
-    text-align: center;
-}
-
-.card-body .card-text {
-    text-align: left;
-}
-
-#spk-flex .col .card.h-100{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    min-width: inherit;
-    height: auto;
-}
-
-.col{
-    min-width: 100%;
-} 
-
-.intro{
-    padding: 0.8rem;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    /*margin-right: auto;*/
 }
 
 @media only screen and (max-width: 549px){
@@ -254,21 +162,6 @@ table{
     }
     #header{
         margin-top: 2rem;
-    }
-    .col .spk{
-        padding: 0.8rem;
-        height: 150pt;
-        width: 150pt;
-        margin-right: auto;
-        margin-left: auto;
-    }
-    #spk-flex .col .card.h-100{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        min-width: inherit;
-        height: auto;
     }
 }
 
@@ -285,22 +178,6 @@ table{
     #header{
         margin-left: 25vw;
         margin-right: auto;
-    }
-    .col .spk{
-        padding: 0.8rem;
-        height: 150pt;
-        width: 150pt;
-        margin-right: auto;
-        margin-left: auto;
-    }
-    #spk-flex .col .card.h-100{
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        min-width: inherit;
-        height: auto;
     }
 }
 
@@ -320,45 +197,4 @@ table{
     }
 }
 
-/* @media only screen and (min-width: 1301px){
-    #info{
-        justify-content: center;
-        text-align: center;
-        margin-top: -10rem;
-        max-width: 1024px;
-        border: solid;
-        margin-left: 18vw;
-        margin-right: auto;
-    }
-    #header{
-        margin-left: auto;
-        margin-right: auto;
-    }
-} */
-
-.col .spk{
-    height: auto;
-    max-height: 220pt;
-    max-width: 220pt;
-    width: 100%;
-}
-
-.col .card{
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-#overview, #topics, #speakers, #submissions, #dates, #org, #prog, #accepted, #schedule, #sponsor{
-    margin-top: 2rem;
-}
-
-.col .card .card-body{
-    width: 100%;
-    text-align: center;
-}
-
-.card-body .card-text {
-    text-align: left;
-}
 
