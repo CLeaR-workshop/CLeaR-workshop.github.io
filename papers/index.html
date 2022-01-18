@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/stylesheet.css" media="screen">
+  <link href='//fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous" defer></script>
+  <!-- <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen"> -->
+  <!-- Latest compiled and minified CSS -->
+  <title>CLeaR 2022</title>
+</head>
+<body id="main">
+<div class="nav-item"><button id="nav-btn">☰
+</button></div>
+<nav id="nav">
+  <ul>
+    <li>
+      <div class="nav-item" id="navitem1">
+        <a href="https://clear-workshop.github.io/#overview">Overview</a>
+      </div>
+    </li>
+    <li>
+      <div class="nav-item">
+        <a href="https://clear-workshop.github.io/#topics">Topics</a>
+      </div>
+    </li>
+    <li>
+      <div class="nav-item">
+        <a href="https://clear-workshop.github.io/#schedule">Schedule</a>
+      </div>
+    </li>
+    <li>
+      <div class="nav-item">
+        <a href="https://clear-workshop.github.io/#speakers">Invited Speakers</a>
+      </div>
+    </li>
+    <li>
+      <div class="nav-item">
+        <a href="#">Accepted Paper</a>
+      </div>
+    </li>
+    <li>
+      <div class="nav-item">
+        <a href="https://clear-workshop.github.io/#dates">Important dates</a>
+      </div>
+    </li>
+    <li>
+      <div class="nav-item">
+        <a href="https://clear-workshop.github.io/papers/page2/#progc">Program Committee</a>
+      </div>
+    </li>
+    <li>
+      <div class="nav-item">
+        <a href="https://clear-workshop.github.io/#org">Organizers</a>
+      </div>
+    </li>
+  </ul>
+</nav>
+<script>
+  const btn = document.getElementById('nav-btn')
+  const nav = document.getElementById('nav');
+
+  btn.addEventListener('click', () => {
+    nav.classList.toggle('active');
+    btn.classList.toggle('active');
+  })
+</script>
+<!-- Bootstrap Static Header -->
+<div id="head-container">
+  <div style="background: url(images/imageonline-co-overlayed-image\ \(1\).jpg)" class="jumbotron bg-cover text-white" id="header">
+    <div class="container py-5 text-center" id="header-text">
+      <h1 class="display-4 font-weight-bold">CLeaR 2022</h1>
+      <p class="font-italic mb-0">The First International Workshop on Combining Learning and Reasoning: Programming Languages, Formalisms, and Representations
+        <br>
+        In conjunction with the 36th AAAI conference on artificial intelligence
+        <a href="https://aaai.org/Conferences/AAAI-22/"> (AAAI-2022)</a>, February 22-March 1, 2022, Vancouver, BC, Canada
+      </p>
+      <p class="font-italic"><span>Workshop Day: Feb 28th, <br>
+            Location: TBD</span>
+      </p>
+    </div>
+  </div>
+</div>
+<nav class="nav flex-column nph" id="navbar">
+  <a class="nav-link active" aria-current="page" href="https://clear-workshop.github.io/#overview" id="navitem1">Overview</a>
+  <a class="nav-link" href="https://clear-workshop.github.io/#topics">Topics</a>
+  <a class="nav-link" href="https://clear-workshop.github.io/#schedule">Schedule</a>
+  <a class="nav-link" href="https://clear-workshop.github.io/#speakers">Invited Speakers</a>
+  <a class="nav-link" href="#">Accepted Papers</a>
+  <a class="nav-link" href="https://clear-workshop.github.io/#dates">Important Dates</a>
+  <a class="nav-link" href="https://clear-workshop.github.io/page2/">Program Committee</a>
+  <a class="nav-link" href="https://clear-workshop.github.io/#org">Organizers</a>
+  <!-- <a class="nav-link" href="#">Link</a> -->
+</nav>
+<div id="info">
+  <h1>Accepted Papers</h1>
+  <table id="progc-table" class="scrollmenu table table-success table-striped" style=" list-style-type: none">
+    <tr class="table-item">
+      <td width="50%">
+        <li style="font-weight: bold">A Hybrid Neuro-Symbolic approach for Text-Based Games using Inductive Logic Programming</li>
+      </td>
+      <td>Kinjal Basu, Keerthiram Murugesan, Mattia Atzeni, Pavan Kapanipathi, Kartik Talamadupula, Tim Klinger, Murray Campbell, Mrinmaya Sachan, Gopal Gupta
+      </td>
+      <!-- <td>kordjams@msu.edu</td> -->
+    </tr>
+
+    <tr class="table-item">
+      <td width="50%">
+        <li style="font-weight: bold">
+          Combining Deep Learning and Reasoning for Address Detection in Unstructured Text Documents
+        </li>
+      </td>
+      <td>
+        Matthias Engelbach, Dennis Klau, Jens Drawehn, Maximilien Kintz
+      </td>
+      <!-- <td>kordjams@msu.edu</td> -->
+    </tr>
+
+    <tr class="table-item">
+      <td width="50%">
+        <li style="font-weight: bold">
+          On the Explainability of Convolutional Layers for Multi-Class Problems
+        </li>
+      </td>
+      <td>
+        Joe Townsend, Mateusz Kudla, Agnieszka Raszkowska, Theodoros Kasiousmis
+      </td>
+      <!-- <td>kordjams@msu.edu</td> -->
+    </tr>
+
+    <tr class="table-item">
+      <td width="50%">
+        <li style="font-weight: bold">
+          Learning Neuro-Symbolic Relational Transition Models for Bilevel Planning
+        </li>
+      </td>
+      <td>
+        Rohan Chitnis, Tom Silver, Joshua B. Tenenbaum, Tomas Perez, Leslie Pack Kaelbling
+      </td>
+      <!-- <td>kordjams@msu.edu</td> -->
+    </tr>
+
+    <tr class="table-item">
+      <td width="50%">
+        <li style="font-weight: bold">
+          Best of Both Worlds: A Hybrid Approach for Multi-Hop Explanation with Declarative Facts
+        </li>
+      </td>
+      <td>
+        Shane Storks, Qiaozi Gao, Aishwarya Naresh Reganti, Govind Thattai
+      </td>
+      <!-- <td>kordjams@msu.edu</td> -->
+    </tr>
+
+    <tr class="table-item">
+      <td width="50%">
+        <li style="font-weight: bold">
+          Compositional Generalization and Neuro-Symbolic Architectures
+        </li>
+      </td>
+      <td>
+        Savitha Sam Abraham, Marjan Alirezaie
+      </td>
+      <!-- <td>kordjams@msu.edu</td> -->
+    </tr>
+
+    <tr class="table-item">
+      <td width="50%">
+        <li style="font-weight: bold">
+          NeuroBE: NN Approximations to Bucket Elimination
+        </li>
+      </td>
+      <td>
+        Sakshi Agarwal, Kalev Kask, Alexander Ihler, Rina Dechter
+      </td>
+      <!-- <td>kordjams@msu.edu</td> -->
+    </tr>
+
+    <tr class="table-item">
+      <td width="50%">
+        <li style="font-weight: bold">
+          Automatic Generation of Neural Architecture Search Spaces
+        </li>
+      </td>
+      <td>
+        David Calhas, Vasco M. Manquinho, Ines Lynce
+      </td>
+      <!-- <td>kordjams@msu.edu</td> -->
+    </tr>
+
+    <tr class="table-item">
+      <td width="50%">
+        <li style="font-weight: bold">
+          A Confidence-Based Interface for Neuro-Symbolic Visual Question Answering
+        </li>
+      </td>
+      <td>
+        Thomas Eiter, Nelson Nicolas Higuera, Johannes Oetsch, Michael Pritz
+      </td>
+      <!-- <td>kordjams@msu.edu</td> -->
+    </tr>
+
+    <tr class="table-item">
+      <td width="50%">
+        <li style="font-weight: bold">
+          Post-processing Counterexample-guided Fairness Guarantees in Neural Networks
+        </li>
+      </td>
+      <td>
+        Kiarash Mohammadi, Aishwarya Sivaraman, Golnoosh Farnadi
+      </td>
+      <!-- <td>kordjams@msu.edu</td> -->
+    </tr>
+
+    <tr class="table-item">
+      <td width="50%">
+        <li style="font-weight: bold">
+          A Brain-Inspired Hierarchical Reasoning Framework for Cognition-Augmented Prosthetic Grasping
+        </li>
+      </td>
+      <td>
+        Laura Isabel Galindez Olascoaga, Alisha Menon, Mohamed Ibrahim, Jan Rabaey
+      </td>
+      <!-- <td>kordjams@msu.edu</td> -->
+    </tr>
+
+    <tr class="table-item">
+      <td width="50%">
+        <li style="font-weight: bold">
+          Representing Prior Knowledge Using Randomly, Weighted Feature Networks for Visual Relationship Detection
+        </li>
+      </td>
+      <td>
+        Jinyung Hong, Ted Pavlic
+      </td>
+      <!-- <td>kordjams@msu.edu</td> -->
+    </tr>
+
+    <tr class="table-item">
+      <td width="50%">
+        <li style="font-weight: bold">
+          Reinforcement Learning with General LTL Objectives is Intractable
+        </li>
+      </td>
+      <td>
+        Cambridge Yang, Michael Littman, Michael Carbin
+      </td>
+      <!-- <td>kordjams@msu.edu</td> -->
+    </tr>
+
+    <tr class="table-item">
+      <td width="50%">
+        <li style="font-weight: bold">
+          FOLD-R++: A Toolset for Automated Inductive Learning of Default Theories from Mixed Data
+        </li>
+      </td>
+      <td>
+        Huaduo Wang, Gopal Gupta
+      </td>
+      <!-- <td>kordjams@msu.edu</td> -->
+    </tr>
+
+    <tr class="table-item">
+      <td width="50%">
+        <li style="font-weight: bold">
+          Imposing Hard Logical Constraints on Multi-label Classification Neural Networks
+        </li>
+      </td>
+      <td>
+        Eleonora Giunchiglia, Thomas Lukasiewicz
+      </td>
+      <!-- <td>kordjams@msu.edu</td> -->
+    </tr>
+
+
+  </table>
+  <div id="sponsor">
+    <span style="text-align: center" class="sponsor-item">Sponsored by </span>
+    <div class="row">
+      <div class="col-lg-4">
+      </div>
+      <div class="col-lg-8">
+        <a class="center-block" style="margin: 0 auto; display: inline" href="https://snorkel.ai/"><img
+                class="center-block" src="https://snorkel.ai/wp-content/uploads/2020/09/logo.svg"
+                alt="Snorkel.ai" style="filter: brightness(1) invert(1)" id="sponsor-logo"></a>
+        <span style="text-align: center" id="footer-text">
+                                            AI beyond manual labeling
+                            </span>
+      </div>
+    </div>
+
+
+    <!--        <p style="text-align: center" id="footer-text">-->
+    <!--            &lt;!&ndash;            Snorkel <br>&ndash;&gt;-->
+    <!--                        AI beyond manual labeling-->
+    <!--        </p>-->
+  </div>
+  <!--    <div id="footer">-->
+  <!--        <footer class="site-footer">-->
+
+  <!--            <span class="site-footer-credits">This page was generated by -->
+  <!--                <a href="https://pages.github.com">GitHub Pages</a>.-->
+  <!--            </span>-->
+  <!--        </footer>-->
+  <!--    </div>-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <!-- Start of StatCounter Code for Default Guide -->
+  <script type="text/javascript">
+    var sc_project = 11083511;
+    var sc_invisible = 1;
+    var sc_security = "2f97c6cf";
+    var scJsHost = (("https:" == document.location.protocol) ?
+            "https://secure." : "http://www.");
+    document.write("<sc" + "ript type='text/javascript' src='" +
+            scJsHost +
+            "statcounter.com/counter/counter.js'></" + "script>");
+  </script>
+  <noscript>
+    <div class="statcounter"><a title="web analytics" href="http://statcounter.com/" target="_blank"><img
+            class="statcounter" src="//c.statcounter.com/11083511/0/2f97c6cf/1/" alt="web
+    analytics"></a></div>
+  </noscript>
+  <!-- End of StatCounter Code for Default Guide -->
+</div>
+</body>
+</html>
