@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/stylesheet.css" media="screen">
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <style>
+        /*
+*
+* ==========================================
+* CUSTOM UTIL CLASSES
+* ==========================================
+*
+*/
+
+        /* Timeline holder */
+        ul.timeline {
+            list-style-type: none;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        /* Timeline vertical line */
+        ul.timeline:before {
+            content: ' ';
+            background: #fff;
+            display: inline-block;
+            position: absolute;
+            left: 16px;
+            width: 4px;
+            height: 100%;
+            z-index: 400;
+            border-radius: 1rem;
+        }
+
+        li.timeline-item {
+            margin: 20px 0;
+        }
+
+        /* Timeline item arrow */
+        .timeline-arrow {
+            border-top: 0.5rem solid transparent;
+            border-right: 0.5rem solid #fff;
+            border-bottom: 0.5rem solid transparent;
+            display: block;
+            position: absolute;
+            left: 2rem;
+        }
+
+        /* Timeline item circle marker */
+        li.timeline-item::before {
+            content: ' ';
+            background: #ddd;
+            display: inline-block;
+            position: absolute;
+            border-radius: 50%;
+            border: 3px solid #fff;
+            left: 11px;
+            width: 14px;
+            height: 14px;
+            z-index: 400;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        }
+
+
+        /*
+        *
+        * ==========================================
+        * FOR DEMO PURPOSES
+        * ==========================================
+        *
+        */
+        body {
+            /*background: rgb(29, 27, 27);;*/
+            background: #E8CBC0;
+            background: -webkit-linear-gradient(to right, #E8CBC0, #636FA4);
+            background: linear-gradient(to right, #E8CBC0, #636FA4);
+            min-height: 100vh;
+        }
+
+        .text-gray {
+            color: #999;
+        }
+
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous" defer></script>
+    <!-- <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen"> -->
+    <!-- Latest compiled and minified CSS -->
+    <title>CLeaR 2022</title>
+</head>
+<body id="main">
+    <div class="nav-item"><button id="nav-btn">☰
+    </button></div>
+    <nav id="nav">
+        <ul>
+            <li>
+                <div class="nav-item" id="navitem1">
+                    <a href="#overview">Overview</a>
+                </div>
+            </li>
+            <li>
+                <div class="nav-item">
+                    <a href="#topics">Topics</a>
+                </div>
+            </li>
+            <li>
+                <div class="nav-item">
+                    <a href="#schedule">Schedule</a>
+                </div>
+            </li>
+            <li>
+                <div class="nav-item">
+                    <a href="#speakers">Invited Speakers</a>
+                </div>
+            </li>
+            <li>
+                <div class="nav-item">
+                    <a href="https://clear-workshop.github.io/papers/">Accepted Paper</a>
+                </div>
+            </li>
+            <li>
+                <div class="nav-item">
+                    <a href="#dates">Important dates</a>
+                </div>
+            </li>
+            <li>
+                <div class="nav-item">
+                    <a href="https://clear-workshop.github.io/page2/">Program Committee</a>
+                </div>
+            </li>
+            <li>
+                <div class="nav-item">
+                    <a href="#org">Organizers</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <script>
+        const btn = document.getElementById('nav-btn')
+        const nav = document.getElementById('nav');
+    
+        btn.addEventListener('click', () => {
+            nav.classList.toggle('active');
+            btn.classList.toggle('active');
+        })
+    </script>
+    <!-- Bootstrap Static Header -->
+<div id="head-container">
+<div style="background: url(images/imageonline-co-overlayed-image\ \(1\).jpg)" class="jumbotron bg-cover text-white" id="header">
+    <div class="container py-5 text-center" id="header-text">
+        <h1 class="display-4 font-weight-bold">CLeaR 2022</h1>
+        <p class="font-italic mb-0">The First International Workshop on Combining Learning and Reasoning: Programming Languages, Formalisms, and Representations
+            <br>
+            In conjunction with the 36th AAAI conference on artificial intelligence
+            <a href="https://aaai.org/Conferences/AAAI-22/"> (AAAI-2022)</a>, February 22-March 1, 2022, Vancouver, BC, Canada
+        </p>
+        <p class="font-italic"><span>Workshop Day: Feb 28th, <br>
+            Location: TBD</span>
+        </p>
+    </div>
+</div>
+</div>
+<nav class="nav flex-column nph" id="navbar">
+    <a class="nav-link active" aria-current="page" href="#overview" id="navitem1">Overview</a>
+    <a class="nav-link" href="#topics">Topics</a>
+    <a class="nav-link" href="#schedule">Schedule</a>
+    <a class="nav-link" href="#speakers">Invited Speakers</a>
+    <a class="nav-link" href="https://clear-workshop.github.io/papers/">Accepted Papers</a>
+    <a class="nav-link" href="#dates">Important Dates</a>
+    <a class="nav-link" href="https://clear-workshop.github.io/page2/">Program Committee</a>
+    <a class="nav-link" href="#org">Organizers</a>
+    <!-- <a class="nav-link" href="#">Link</a> -->
+</nav>
+<div id="info">
+    <div class="container py-5">
+
+        <!-- For demo purpose -->
+        <div class="row text-center text-white mb-5">
+            <div class="col-lg-8 mx-auto">
+                <h1 class="display-4">Workshop Schedule</h1>
+                <p> All times are in EST.</p>
+            </div>
+        </div><!-- End -->
+
+
+        <div class="row">
+            <div class="col-lg-12 mx-auto">
+
+                <!-- Timeline -->
+                <ul class="timeline">
+                    <li class="timeline-item bg-white rounded ml-3 p-4 shadow">
+                        <div class="timeline-arrow"></div>
+                        <h2 class="h5 mb-0">Opening remarks</h2><span class="small text-gray"><i class="fa fa-clock-o mr-1"></i>8:45 - 9:00</span>
+                    </li>
+                    <li class="timeline-item bg-white rounded ml-3 p-4 shadow">
+                        <div class="timeline-arrow"></div>
+                        <h2 class="h5 mb-0">Invited Talk: Sriraam Natarajan</h2><span class="small text-gray"><i class="fa fa-clock-o mr-1"></i>9:00 - 9:45</span>
+<!--                        <p class="text-small mt-2 font-weight-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque diam non nisi semper.</p>-->
+<!--                        <p class="text-small mt-2 font-weight-light">Libero expedita explicabo eius fugiat quia aspernatur autem laudantium error architecto recusandae natus sapiente sit nam eaque, consectetur porro molestiae ipsam! Deleniti.</p>-->
+                    </li>
+                    <li class="timeline-item bg-white rounded ml-3 p-4 shadow">
+                        <div class="timeline-arrow"></div>
+                        <h2 class="h5 mb-0">Invited Talk: Kevin Ellis</h2><span class="small text-gray"><i class="fa fa-clock-o mr-1"></i>9:45 - 10:30</span>
+                        <p class="text-small mt-2 font-weight-light">
+                            Title: What Program Synthesis Can Learn From How People Write Code
+                        </p>
+                        <p class="text-small mt-2 font-weight-light">
+                            Abstract: How can we best make systems which learn to write computer
+                            programs?  Here I explore the idea that we should take insight
+                            from the techniques and tools that human coders use when building
+                            software, but that we should combine those insights with machine
+                            learning methods. I focus on two basic coding techniques: writing
+                            libraries, and using interpreters ("REPLs"). For libraries, I
+                            present a system called DreamCoder, which grows a library of
+                            reusable subroutines as it solves a range of programming
+                            problems. DreamCoder's architecture builds on the structure of
+                            wake-sleep neural network training algorithms, and combines both
+                            symbolic and neural learning. For interpreters, I present a
+                            system which learns to interact with a REPL while it writes code,
+                            showing that this can help mitigate the combinatorial search
+                            difficulties of program synthesis. At the end of the talk, I will
+                            present preliminary results on modeling another aspect of coding:
+                            creating challenging and interesting programming problems.
+                        </p>
+                    </li>
+                    <li class="timeline-item bg-white rounded ml-3 p-4 shadow">
+                        <div class="timeline-arrow"></div>
+                        <h2 class="h5 mb-0">Poster Spotlights and Poster session</h2><span class="small text-gray"><i class="fa fa-clock-o mr-1"></i>10:30 - 12:00</span>
+<!--                        <p class="text-small mt-2 font-weight-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque diam non nisi semper, et elementum lorem ornare. Maecenas placerat facilisis mollis. Duis sagittis ligula in sodales vehicula....</p>-->
+                    </li>
+                    <li class="timeline-item bg-white rounded ml-3 p-4 shadow">
+                        <div class="timeline-arrow"></div>
+                        <h2 class="h5 mb-0">Lunch break</h2><span class="small text-gray"><i class="fa fa-clock-o mr-1"></i>12:00 - 13:00</span>
+                    </li>
+
+                    <li class="timeline-item bg-white rounded ml-3 p-4 shadow">
+                        <div class="timeline-arrow"></div>
+                        <h2 class="h5 mb-0">Invited Talk: Gary Marcus </h2><span class="small text-gray"><i class="fa fa-clock-o mr-1"></i>13:00 - 13:45</span>
+                        <p class="text-small mt-2 font-weight-light">
+                            Title: Towards a Proper Foundation for Artificial General Intelligence
+                        </p>
+                        <p class="text-small mt-2 font-weight-light">
+                            Abstract: Large pretrained language models like BERT and GPT-3 have generated enormous enthusiasm, and are capable of producing remarkably fluent language. But they have also been criticized on many grounds, and described as "stochastic parrots." Are they adequate as a basis for general intelligence, and if not, what would a better foundation for general intelligence look like?
+                        </p>
+                    </li>
+
+                    <li class="timeline-item bg-white rounded ml-3 p-4 shadow">
+                        <div class="timeline-arrow"></div>
+                        <h2 class="h5 mb-0">Invited Talk: Monireh Ebrahimi </h2><span class="small text-gray"><i class="fa fa-clock-o mr-1"></i>13:45 - 14:30</span>
+                        <p class="text-small mt-2 font-weight-light">
+                            Title:
+                        </p>
+                        <p class="text-small mt-2 font-weight-light">
+                            Abstract:
+                        </p>
+                    </li>
+
+                    <li class="timeline-item bg-white rounded ml-3 p-4 shadow">
+                        <div class="timeline-arrow"></div>
+                        <h2 class="h5 mb-0">Invited Talk: Carla Gomes </h2><span class="small text-gray"><i class="fa fa-clock-o mr-1"></i>14:30 - 15:15</span>
+                        <p class="text-small mt-2 font-weight-light">
+                            Title:
+                        </p>
+                        <p class="text-small mt-2 font-weight-light">
+                            Abstract:
+                        </p>
+                    </li>
+
+                    <li class="timeline-item bg-white rounded ml-3 p-4 shadow">
+                        <div class="timeline-arrow"></div>
+                        <h2 class="h5 mb-0">Break</h2><span class="small text-gray"><i class="fa fa-clock-o mr-1"></i>15:15 - 15:30</span>
+                    </li>
+
+                    <li class="timeline-item bg-white rounded ml-3 p-4 shadow">
+                        <div class="timeline-arrow"></div>
+                        <h2 class="h5 mb-0">Invited Talk: Brian Wilder </h2><span class="small text-gray"><i class="fa fa-clock-o mr-1"></i>15:30 - 16:15</span>
+                        <p class="text-small mt-2 font-weight-light">
+                            Title: Bridging discrete optimization and machine learning
+                        </p>
+                        <p class="text-small mt-2 font-weight-light">
+                            Abstract:
+                            Many uses of machine learning require bridging the continuous world of ML models with the discrete world of combinatorial optimization. For example, in many socially consequential applications, the predictions of a machine learning model are used as the input to a combinatorial optimization problem which models the allocation of scarce resources according to predicted need. Or, in reasoning tasks we may wish to search for outputs that satisfy particular logical constraints. Connecting machine learning and discrete optimization offers the potential to train ML models end-to-end for such use cases. However, modern ML requires a differentiable training pipeline, while the solutions to discrete optimization problems inherently lack informative gradients. In this talk, I will present two strategies to integrate discrete optimization problems into the training loop of a ML model. The first is to construct a differentiable relaxation of the discrete optimization problem. I will show that this strategy can be instantiated across diverse problem classes such as linear programs, submodular maximization, mixed-integer linear programs, and MAXSAT problems. The second is to learn a good relaxation in an automated fashion for a given distribution of problem instances. Together, these methods provide a flexible toolbox to bridge the continuous and discrete worlds and lead to significant improvements on a range of decision making and reasoning tasks.
+                        </p>
+                    </li>
+
+                    <li class="timeline-item bg-white rounded ml-3 p-4 shadow">
+                        <div class="timeline-arrow"></div>
+                        <h2 class="h5 mb-0">Invited Talk: Vered Schwartz </h2><span class="small text-gray"><i class="fa fa-clock-o mr-1"></i>16:15 - 17:00</span>
+                        <p class="text-small mt-2 font-weight-light">
+                            Title:
+                        </p>
+                        <p class="text-small mt-2 font-weight-light">
+                            Abstract:
+                        </p>
+                    </li>
+
+                    <li class="timeline-item bg-white rounded ml-3 p-4 shadow">
+                        <div class="timeline-arrow"></div>
+                        <h2 class="h5 mb-0">Break</h2><span class="small text-gray"><i class="fa fa-clock-o mr-1"></i>17:00 - 17:15</span>
+                    </li>
+
+                    <li class="timeline-item bg-white rounded ml-3 p-4 shadow">
+                        <div class="timeline-arrow"></div>
+                        <h2 class="h5 mb-0">Panel</h2><span class="small text-gray"><i class="fa fa-clock-o mr-1"></i>17:15 - 18:15</span>
+                        <p class="text-small mt-2 font-weight-light">
+                            Featuring:
+                        </p>
+                    </li>
+
+                    <li class="timeline-item bg-white rounded ml-3 p-4 shadow">
+                        <div class="timeline-arrow"></div>
+                        <h2 class="h5 mb-0">Poster session</h2><span class="small text-gray"><i class="fa fa-clock-o mr-1"></i>18:15 - 19:30</span>
+                        <!--                        <p class="text-small mt-2 font-weight-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque diam non nisi semper, et elementum lorem ornare. Maecenas placerat facilisis mollis. Duis sagittis ligula in sodales vehicula....</p>-->
+                    </li>
+                </ul><!-- End -->
+
+            </div>
+        </div>
+    </div>
+
+<!--    <div id="footer">-->
+<!--        <footer class="site-footer">-->
+
+<!--            <span class="site-footer-credits">This page was generated by -->
+<!--                <a href="https://pages.github.com">GitHub Pages</a>.-->
+<!--            </span>-->
+<!--        </footer>-->
+<!--    </div>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <!-- Start of StatCounter Code for Default Guide -->
+    <script type="text/javascript">
+    var sc_project = 11083511;
+    var sc_invisible = 1;
+    var sc_security = "2f97c6cf";
+    var scJsHost = (("https:" == document.location.protocol) ?
+      "https://secure." : "http://www.");
+    document.write("<sc" + "ript type='text/javascript' src='" +
+      scJsHost +
+      "statcounter.com/counter/counter.js'></" + "script>");
+    </script>
+    <noscript>
+    <div class="statcounter"><a title="web analytics" href="http://statcounter.com/" target="_blank"><img
+          class="statcounter" src="//c.statcounter.com/11083511/0/2f97c6cf/1/" alt="web
+    analytics"></a></div>
+    </noscript>
+    <!-- End of StatCounter Code for Default Guide -->
+</div>
+</body>
+</html>
